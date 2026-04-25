@@ -7,7 +7,7 @@ WORKDIR /app
 # Copiar dependencias primero (para aprovechar cache de Docker)
 COPY app.py .
 COPY requirements.txt .
-
+COPY postman_collection.json .
 
 # Instalar dependencias
 RUN pip install --no-cache-dir -r requirements.txt
